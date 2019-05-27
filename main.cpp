@@ -27,7 +27,7 @@ int main() {
     std::cout << "Huffman Coding Runner" << std::endl;
 
 //    HuffCom huff_com("It was the best of times, it was the blurst of times...");
-    HuffCom huff_com("That he sensed in himself the troubling presence of his unlived life we can divine from the frequency with which he exhibits characters who cry out for the experiences their tempraments deny them.");
+    HuffCom huff_com("That he sensed in himself the troubling presence of his unlived life we can divine from the frequency with which he exhibits characters who cry out for the experiences that their tempraments deny them.");
 
     std::string encode = huff_com.encode();
 
