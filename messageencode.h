@@ -7,6 +7,7 @@
 #include <utility>
 #include <list>
 #include <sstream>
+#include <vector>
 
 #include "huffcodetreenode.h"
 
@@ -16,6 +17,7 @@ public:
     MessageEncode();
     void build_encoding_map(const std::shared_ptr<HuffCodeTreeNode>&, std::map<char, std::string>&);
     std::string encode(const std::string&);
+    void encode_bits(const std::string&, std::vector<bool>&);
 protected:
     std::map<char, std::string> m_encoding_map;
     void m_set_encoding_map(const std::map<char, std::string>&);

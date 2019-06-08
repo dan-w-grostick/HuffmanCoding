@@ -4,6 +4,7 @@
 #include <string>
 #include <map>
 #include <memory>
+#include <vector>
 
 #include "huffcodetreenode.h"
 #include "calculatefrequency.h"
@@ -15,9 +16,9 @@ class HuffCom
 {
 public:
     HuffCom(const std::string&);
-    std::string encode();
-    std::string alternate_encode(const std::string&);
-    std::string decode(const std::string&);
+    virtual ~HuffCom();
+    virtual std::string encode() = 0;
+    virtual std::string decode(const std::string&) = 0;
 protected:
     void m_perform_huffman(const std::string&);
     std::map<char, int> m_frequency_map;

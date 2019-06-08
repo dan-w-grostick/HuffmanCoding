@@ -57,6 +57,22 @@ std::string MessageEncode::encode(const std::string &source) {
     return return_value;
 }
 
+#include <iostream>
+void MessageEncode::encode_bits(const std::string &source, std::vector<bool> &bits) {
+
+    if (bits.size() > 0) { bits.clear(); }
+
+    std::string return_value = encode(source);
+
+    for (const char &bit : return_value) {
+        if (bit == '0')
+            bits.push_back(false);
+        else
+            bits.push_back(true);
+    }
+    std::cout << bits.size() << std::endl;
+}
+
 void MessageEncode::m_set_encoding_map(const std::map<char, std::string> &encoding_map) {
     m_encoding_map = encoding_map;
     m_encoding_map_set = true;

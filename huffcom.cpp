@@ -6,13 +6,21 @@ HuffCom::HuffCom(const std::string &source_string)
     m_perform_huffman(source_string);
 }
 
+HuffCom::~HuffCom() {
+
+}
+
 std::string HuffCom::encode() {
     return m_msg_encode.encode(m_source_message);
 }
 
-std::string HuffCom::alternate_encode(const std::string &message) {
-    return m_msg_encode.encode(message);
-}
+//void HuffCom::encode_bits(std::vector<bool> &bits) {
+//    m_msg_encode.encode_bits(m_source_message, bits);
+//}
+
+//std::string HuffCom::alternate_encode(const std::string &message) {
+//    return m_msg_encode.encode(message);
+//}
 
 // We need to destroy in:code to decode.  Either pass by copy or create copy here.
 std::string HuffCom::decode(const std::string &code) {

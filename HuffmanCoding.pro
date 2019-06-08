@@ -10,6 +10,7 @@ SOURCES += \
         calculatefrequencytester.cpp \
         huffcodetreenode.cpp \
         huffcom.cpp \
+        huffcomstring.cpp \
         main.cpp \
         messagedecode.cpp \
         messagedecodetester.cpp \
@@ -38,6 +39,7 @@ HEADERS += \
     calculatefrequency.h \
     huffcodetreenode.h \
     huffcom.h \
+    huffcomstring.h \
     messagedecode.h \
     messageencode.h \
     nodecreate.h \
